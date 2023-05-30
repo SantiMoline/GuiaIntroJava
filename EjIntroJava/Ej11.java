@@ -29,7 +29,7 @@ public class Ej11 {
                     System.out.println("El resultado de la multiplicación de los números ingresados es: " + (num1 * num2));
                     break;
                 case 4:
-                    System.out.println("La división de los números ingresados es: " + (num1/num2));
+                    System.out.println("La división de los números ingresados es: " + ((double)num1/(double)num2));
                     break;
                 case 5:
                     System.out.println("Está seguro que desea salir del programa? (S/N)");
