@@ -1,3 +1,4 @@
+package EjIntroJava;
 public class Ej21 {
     public static void main(String[] args) {
         //int[][] matrizM, matrizP;

@@ -1,3 +1,4 @@
+package EjIntroJava;
 import java.util.Random;
 import java.util.Scanner;
 
