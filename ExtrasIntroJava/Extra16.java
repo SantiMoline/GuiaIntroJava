@@ -1,14 +1,17 @@
 import java.util.Scanner;
 
 public class Extra16 {
+    public static Scanner scan = new Scanner(System.in); 
+    //Para utilizar scan en todas las funciones y que no tire error VS code por no cerrarlo.
+    //De esta forma se declara la variable acá y se cierra al finalizar main, y no en cada función.
     public static void main(String[] args) {
         int[] edades;
         String[] nombres;
         int n;
-        Scanner scan = new Scanner(System.in);
 
         System.out.println("Indique cuántas personas va a cargar en la base de datos: ");
         n = scan.nextInt();
+        scan.nextLine(); //Para capturar el enter del nextInt().
         edades = new int[n];
         nombres = new String[n];
         cargarPersonas(nombres, edades);
@@ -18,7 +21,6 @@ public class Extra16 {
     }
 
     public static void cargarPersonas(String[] names, int[] ages) {
-        Scanner scan = new Scanner(System.in);
         for (int i = 0; i < names.length; i++) {
             System.out.println("Indique el nombre de la persona: ");
             names[i] = scan.nextLine();
@@ -26,12 +28,10 @@ public class Extra16 {
             ages[i] = scan.nextInt();
             scan.nextLine(); //Para capturar el enter que queda del nextInt()
         }
-        //scan.close();
     }
 
     public static void imprimirPersonas(String[] names, int[] ages) {
         String opt = "";
-        Scanner scan = new Scanner (System.in);
 
         System.out.println("----Comienza la impresión de la información cargada----");
         for (int i = 0; i < ages.length && !opt.equalsIgnoreCase("no"); i++) {
@@ -51,7 +51,6 @@ public class Extra16 {
             } 
             System.out.println("----------------------------");
         }
-        //scan.close();
     }
 }
 
