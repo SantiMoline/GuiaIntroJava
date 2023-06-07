@@ -28,9 +28,9 @@ public class Ej21 {
 
 
     public static boolean estaContenida(int[][] matM, int[][] matP) {
-        for (int i = 0; i < matM.length; i++) {
-            for (int j = 0; j < matM[0].length; j++) {
-                if(matM[i][j] == matP[0][0] && i < matM.length - 2 && j < matM[0].length - 2 ) {
+        for (int i = 0; i < matM.length - matP.length + 1; i++) {
+            for (int j = 0; j < matM[0].length - matP[0].length + 1; j++) {
+                if(matM[i][j] == matP[0][0]) {
                     if (barrido3x3(matM, i, j, matP)) {
                         System.out.println("La matriz P se encuentra contenida en la matriz M a partir de la fila " + (i+1) + " y la columna " + (j+1));
                         return true;
